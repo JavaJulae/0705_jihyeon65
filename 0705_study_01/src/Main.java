@@ -3,15 +3,14 @@ class BoardPost{
     String content;
     private int viewCount;
 
-    BoardPost(String title, String content){
+    public BoardPost(String title, String content){
         this.title = title;
         this.content = content;
         this.viewCount = 0;
     }
 
-    void read() {
-        this.viewCount++;
-
+    public void read() {
+        viewCount++;
         if(this.viewCount >= 10) {
             System.out.println("[인기] " + title);
         } else {
